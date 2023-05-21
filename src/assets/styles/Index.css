@@ -1,0 +1,20 @@
+@import 'normalize.css';
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Crea 4 columnas de tamaño flexible */
+    gap: 10px; /* Espacio entre las celdas */
+    place-items: center;
+  }
+  .cursorPointer{
+    cursor: pointer;
+    /* border: 1px solid black; */
+  }
+
+  
+  /* Cambio a 1 columna en versión móvil */
+  @media (max-width: 767px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Cambia a 1 columna */
+      place-items: center;
+    }
+  }

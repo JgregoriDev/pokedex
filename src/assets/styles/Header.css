@@ -1,0 +1,129 @@
+header {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav {
+  position: relative;
+}
+.navigationMenu {
+  width: 70%;
+}
+.searchMenu {
+  width: 30%;
+  text-align: right;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  position: relative;
+  flex: 1;
+}
+
+.menu li a {
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  background-color: #333;
+  display: none;
+}
+
+.buttonNav {
+  color: white;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  margin: 10px 10px;
+}
+.buttonNav:hover {
+  color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+
+.separator {
+  border-top: 1px solid rgba(255, 255, 255, 0.457);
+}
+
+.menu li:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  position: relative;
+}
+
+.submenu li a {
+  padding: 10px;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    background-color: #333;
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+  }
+
+  .navigationMenu {
+    width: 50%;
+    order: 1;
+  }
+  .searchMenu {
+    width: 50%;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a {
+    text-align: center;
+  }
+
+  .menu li .submenu {
+    position: static;
+    background-color: transparent;
+    display: block;
+  }
+  .marginBottom {
+    margin-bottom: 20px;
+  }
+}
