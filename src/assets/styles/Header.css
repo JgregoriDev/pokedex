@@ -6,9 +6,11 @@ header {
 nav {
   position: relative;
 }
+
 .navigationMenu {
   width: 70%;
 }
+
 .searchMenu {
   width: 30%;
   text-align: right;
@@ -53,6 +55,7 @@ nav {
   border-color: rgba(0, 0, 0, 0);
   margin: 10px 10px;
 }
+
 .buttonNav:hover {
   color: rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -77,16 +80,14 @@ nav {
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
   .submenu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    list-style: none;
-    background-color: #333;
-    display: none;
+    position: static;
+    background-color: transparent;
+    display: block;
+    margin-top: 10px; /* Espacio entre el enlace principal y el submenu */
   }
 
   .menu-toggle {
-    display: block;
+    display: none;
     cursor: pointer;
     position: absolute;
     top: 10px;
@@ -95,14 +96,17 @@ nav {
   }
 
   .navigationMenu {
-    width: 50%;
-    order: 1;
+    width: 100%; /* El 100% del ancho en dispositivos móviles */
+    order: 2; /* Cambiamos el orden en el flujo del documento */
+    margin-bottom: 10px; /* Espacio inferior entre el menú de navegación y el menú de búsqueda */
   }
+
   .searchMenu {
-    width: 50%;
+    width: 100%; /* El 100% del ancho en dispositivos móviles */
   }
+
   .menu {
-    display: none;
+    display: block;
     flex-direction: column;
   }
 
@@ -123,6 +127,7 @@ nav {
     background-color: transparent;
     display: block;
   }
+
   .marginBottom {
     margin-bottom: 20px;
   }
